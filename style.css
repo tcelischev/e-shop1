@@ -3,15 +3,12 @@
     padding: 0;
 }
 
-
-html,
 body {
     font-family: 'Montserrat', sans-serif;
-    height: 100%;
 }
 
-.container-products {
-    max-width: 1366px;
+.container {
+    width: 1366px;
     margin: 0 auto;
 }
 
@@ -44,7 +41,6 @@ body {
 .menu-link {
     display: block;
     padding: 10px 13px;
-    /* fvfdvdf  */
     color: #8c8c8c;
     font-size: 14px;
     font-weight: 300;
@@ -97,11 +93,9 @@ body {
 
 .button {
     color: #212121;
-    color: #6c6c6c;
     font-size: 18px;
     font-weight: 700;
     text-transform: uppercase;
-    color: #212121;
     letter-spacing: 3.6px;
     text-decoration: none;
     height: 45px;
@@ -114,8 +108,23 @@ body {
     padding-right: 31px;
 }
 
+.button:hover {
+    background-color: rgba(209, 209, 209, 0.35);
+    transition-property: background-color;
+    transition-duration: 150ms;
+    transition-timing-function: ease-out;
+}
+
+.button:active {
+    background-color: #fff;
+    box-shadow: 0 -2px 5px 1px rgba(33, 33, 33, 0.35);
+    transition-property: box-shadow, background-color;
+    transition-duration: 150ms;
+    transition-timing-function: ease-out;
+}
+
 .header-text {
-    margin-top: 283px;
+    margin-top: 273px;
 }
 
 .pagination {
@@ -143,13 +152,14 @@ body {
     height: 40px;
 }
 
+
 /*  put footer to bottom */
 .wrapper-top {
     flex-grow: 1;
 }
 
 .wrapper-main {
-    min-height: 100%;
+
     display: flex;
     flex-direction: column;
 }
@@ -161,15 +171,85 @@ body {
 
 /*  put footer to bottom.  END */
 
-.container2 {
-    max-width: 1366px;
-    margin: 0 auto;
+.product-plates {
+    padding-top: 50px;
+    padding-bottom: 120px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
+
+.menu-product-plates {
+    display: flex;
+    list-style-type: none;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.menu-link2 {
+    padding: 20px 20px 20px 9px;
+    color: #6c6c6c;
+    border-bottom: 1px solid #212121;
+    letter-spacing: 3.6px;
+    font-family: Montserrat;
+    font-size: 36px;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.menu-link2:hover {
+    border-bottom: 3px solid #212121;
+    padding-bottom: 17px;
+}
+
+.menu-link2-active {
+    height: 27px;
+    color: #212121;
+    font-size: 36px;
+    font-weight: 700;
+}
+
+.menu-link3 {
+    color: #6c6c6c;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 24px;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #212121;
+    letter-spacing: 3.6px;
+}
+
+.container-products {
+    margin: 15px;
+    display: flex;
+    width: 270px;
+    height: 270px;
+    position: relative;
+}
+
+/*  Заглушка для ховера. #TODO верстка, не картинка  */
+.products-img-hover {
+    display: none;
+    position: absolute;
+    top: 0;
+}
+
+.container-products:hover .products-img-hover {
+    display: flex;
+}
+
+.container-products-trending {
+    margin: 15px;
+    display: flex;
+    width: 370px;
+    height: 370px;
+    position: relative;
 }
 
 
-.container-products-img {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-around;
+
+.container-products-trending:hover {
+    box-shadow: 0px 0px 1px 2px rgba(114, 114, 114, 0.35);
 }
